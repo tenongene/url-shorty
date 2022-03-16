@@ -8,7 +8,9 @@ const Form = () => {
 				Enter Url:
 			</label>
 			<input placeholder="Paste your url here" id="url" type="text" value="" required />
-            <button type="submit" className="btn">Submit</button>
+			<button type="submit" className="btn">
+				Shorten
+			</button>
 		</form>
 	);
 };
