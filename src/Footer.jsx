@@ -4,10 +4,10 @@ import './Footer.css';
 const Footer = () => {
 
     const footerStyle = {
-		backgroundColor: 'cornsilk',
+		backgroundColor: 'rgb(105, 236, 175)',
 		fontSize: '20px',
-		padding: '1px px',
-		borderRadius: '10px',
+		padding: '40px 20px',
+		
 	};
 
   return (
