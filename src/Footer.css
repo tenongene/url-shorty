@@ -1,6 +1,6 @@
 .footer {
-    margin-top:400px;
+    /* margin-top:400px; */
+    justify-self: flex-end;
     display:flex;
     justify-content:center;
-   
 }

@@ -7,7 +7,6 @@ const Footer = () => {
 		backgroundColor: 'rgb(105, 236, 175)',
 		fontSize: '20px',
 		padding: '40px 20px',
-		
 	};
 
   return (

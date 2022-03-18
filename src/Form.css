@@ -6,6 +6,10 @@
 	margin-bottom: 50px;
 }
 
+.input input[type="text"] {
+    outline: none
+}
+
 .label {
 	margin-right: 15px;
 	display: inline-block;
