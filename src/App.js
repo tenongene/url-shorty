@@ -13,7 +13,7 @@ import { useState } from 'react';
 function App() {
 	const [url, setUrl] = useState('');
 	const [newUrl, setNewUrl] = useState('');
-	const [errMsg, setErrMsg] = useState('inherit');
+	const [errMsg, setErrMsg] = useState('rgb(13, 189, 136)');
 
 	const getLink = async function (link) {
 		try {
@@ -31,8 +31,8 @@ function App() {
 			setNewUrl(data.link);
 			//
 		} catch (err) {
+			console.log(err);
 			setNewUrl(err.message);
-			setErrMsg('red');
 			setUrl('');
 		}
 	};
@@ -64,8 +64,6 @@ function App() {
 					setNewUrl={setNewUrl}
 					clipboardMessage={clipboardMessage}
 					setClipboardMessage={setClipboardMessage}
-					errMsg={errMsg}
-					setErrMsg={setErrMsg}
 				/>
 				<Button handleReset={handleReset} />
 				<Footer />

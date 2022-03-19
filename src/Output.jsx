@@ -3,13 +3,13 @@ import './Output.css';
 import { FiCopy } from 'react-icons/fi';
 
 
-const Output = ({ newUrl, clipboardMessage, errMsg}) => {
+const Output = ({ newUrl, clipboardMessage, }) => {
 	
 
 	return (
 		<div className="output">
 			<p>Here is your shortened Url:</p>
-			<blockquote className="newUrl" style={{color: `${errMsg}`}}>
+			<blockquote className="newUrl">
 				{newUrl}
 				<button
 					className="copy"
