@@ -1,7 +1,6 @@
 import React from 'react';
 import './Form.css';
 
-
 const Form = ({ url, setUrl, handleSubmit }) => {
 	return (
 		<form className="input" onSubmit={handleSubmit}>

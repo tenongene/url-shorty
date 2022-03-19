@@ -5,8 +5,8 @@
 }
 
 .App {
-    display:flex;
-    flex-direction: column;
+	display: flex;
+	flex-direction: column;
 	border: 0.5px solid black;
 	box-shadow: 0 5px 5px;
 	margin: 5px 15px;

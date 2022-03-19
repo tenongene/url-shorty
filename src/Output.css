@@ -32,7 +32,6 @@ p {
 	background-color: inherit;
 	color: inherit;
 	cursor: pointer;
-    
 }
 
 .copy:hover {
@@ -40,10 +39,9 @@ p {
 }
 
 .message {
-    display: inline-block;
-    font-size: 0.8rem;
-    margin-left: -2rem;
-    transform: translateY(120%);
-    color: rgb(13, 189, 136);
-    
+	display: inline-block;
+	font-size: 0.8rem;
+	margin-left: -2rem;
+	transform: translateY(120%);
+	color: rgb(13, 189, 136);
 }
