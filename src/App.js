@@ -5,11 +5,12 @@ import Form from './Form';
 import Footer from './Footer';
 import Output from './Output';
 import { useState } from 'react';
-//BitLy Access token: da239b687ac1cba62bc92b9a01ca02582d7c6d0c
 
+//BitLy Access token: da239b687ac1cba62bc92b9a01ca02582d7c6d0c
 
 function App() {
 	const [url, setUrl] = useState('');
+	const [newUrl, setNewUrl] = useState('');
 
 	const getLink = async function (link) {
 		const response = await fetch('https://api-ssl.bitly.com/v4/shorten', {
@@ -21,13 +22,13 @@ function App() {
 			body: JSON.stringify({ long_url: `${link}`, domain: 'bit.ly' }),
 		});
 		const data = await response.json();
+        setNewUrl(data.link);
 		console.log(data.link);
 	};
 
 	const handleSubmit = function (e) {
 		e.preventDefault();
 		getLink(url);
-		setUrl('');
 	};
 
 	return (
@@ -35,8 +36,9 @@ function App() {
 			<>
 				<Header />
 				<Form handleSubmit={handleSubmit} url={url} setUrl={setUrl} />
-				<Output />
+				<Output newUrl={newUrl} setNewUrl={setNewUrl} />
 				<Footer />
+                
 			</>
 		</div>
 	);

@@ -1,17 +1,9 @@
 import React from 'react';
+import './Header.css';
 
 const Header = () => {
-	const headerStyle = {
-		backgroundColor: 'rgb(105, 236, 175)',
-		marginBottom: '50px',
-		fontSize: '20px',
-		padding: ' 20px',
-        
-		
-	};
-
 	return (
-		<div className="header" style={headerStyle}>
+		<div className="header">
 			<h2>Shorten Your URL</h2>
 		</div>
 	);

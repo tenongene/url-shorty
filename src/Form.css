@@ -4,10 +4,12 @@
 	margin-left: 35px;
 	font-size: 20px;
 	margin-bottom: 50px;
+	outline: none;
 }
 
-.input input[type="text"] {
-    outline: none
+input[value] {
+	font-size: 10px;
+	outline: none;
 }
 
 .label {
@@ -32,7 +34,7 @@
 	cursor: pointer;
 	border-radius: 10px;
 	border: none;
-	background-color: rgb(105, 236, 175)
+	background-color: rgb(105, 236, 175);
 }
 
 .btn:hover {

@@ -1,10 +1,8 @@
 import React from 'react';
 import './Form.css';
 
-const Form = ({url, setUrl, handleSubmit}) => {
 
-    
-
+const Form = ({ url, setUrl, handleSubmit }) => {
 	return (
 		<form className="input" onSubmit={handleSubmit}>
 			<label htmlFor="url" className="label">
@@ -15,12 +13,10 @@ const Form = ({url, setUrl, handleSubmit}) => {
 				id="url"
 				type="text"
 				required
-				autoFocus	
-                value={url}	
-                onChange = {e => setUrl(e.target.value)}
-                
+				autoFocus
+				value={url}
+				onChange={(e) => setUrl(e.target.value)}
 			/>
-
 			<button type="submit" className="btn">
 				Shorten
 			</button>
