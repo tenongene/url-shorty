@@ -13,7 +13,6 @@ import { useState } from 'react';
 function App() {
 	const [url, setUrl] = useState('');
 	const [newUrl, setNewUrl] = useState('');
-	const [errMsg, setErrMsg] = useState('rgb(13, 189, 136)');
 
 	const getLink = async function (link) {
 		try {
