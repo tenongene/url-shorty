@@ -1,19 +1,15 @@
 import React, { useState } from 'react';
 import './Output.css';
 import { FiCopy } from 'react-icons/fi';
-import Clipboard from 'clipboard';
 
-const Output = ({ newUrl }) => {
-	const [clipboardMessage, setClipboardMessage] = useState('');
-	const clippy = new Clipboard('.copy');
-	clippy.on('success', () => {
-		setClipboardMessage('Copied to clipboard');
-	});
+
+const Output = ({ newUrl, clipboardMessage, errMsg}) => {
+	
 
 	return (
 		<div className="output">
 			<p>Here is your shortened Url:</p>
-			<blockquote className="newUrl">
+			<blockquote className="newUrl" style={{color: `${errMsg}`}}>
 				{newUrl}
 				<button
 					className="copy"
