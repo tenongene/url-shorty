@@ -4,6 +4,7 @@ import Header from './Header';
 import Form from './Form';
 import Footer from './Footer';
 import Output from './Output';
+import Button from './Button';
 import { useState } from 'react';
 
 //BitLy Access token: da239b687ac1cba62bc92b9a01ca02582d7c6d0c
@@ -22,13 +23,17 @@ function App() {
 			body: JSON.stringify({ long_url: `${link}`, domain: 'bit.ly' }),
 		});
 		const data = await response.json();
-        setNewUrl(data.link);
-		console.log(data.link);
+		setNewUrl(data.link);
 	};
 
 	const handleSubmit = function (e) {
 		e.preventDefault();
 		getLink(url);
+	};
+
+	const handleReset = () => {
+		setUrl('');
+		setNewUrl('');
 	};
 
 	return (
@@ -37,8 +42,8 @@ function App() {
 				<Header />
 				<Form handleSubmit={handleSubmit} url={url} setUrl={setUrl} />
 				<Output newUrl={newUrl} setNewUrl={setNewUrl} />
+				<Button handleReset={handleReset} />
 				<Footer />
-                
 			</>
 		</div>
 	);

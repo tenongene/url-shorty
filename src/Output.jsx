@@ -4,11 +4,10 @@ import { FiCopy } from 'react-icons/fi';
 import Clipboard from 'clipboard';
 
 const Output = ({ newUrl }) => {
-
-    const [clipMessage, setClipMessage] = useState('')
+	const [clipboardMessage, setClipboardMessage] = useState('');
 	const clippy = new Clipboard('.copy');
 	clippy.on('success', () => {
-        setClipMessage('Copied to clipboard')
+		setClipboardMessage('Copied to clipboard');
 	});
 
 	return (
@@ -16,11 +15,15 @@ const Output = ({ newUrl }) => {
 			<p>Here is your shortened Url:</p>
 			<blockquote className="newUrl">
 				{newUrl}
-				<button className="copy" data-clipboard-target=".newUrl">
+				<button
+					className="copy"
+					data-clipboard-target=".newUrl"
+					style={{ display: `${newUrl ? 'block' : 'none'}` }}>
 					<FiCopy />
 				</button>
 			</blockquote>
-			<p className='message'>{clipMessage}</p>
+			<p className="message">{clipboardMessage}</p>
+			
 		</div>
 	);
 };
