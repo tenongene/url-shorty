@@ -10,6 +10,7 @@ import { useState } from 'react';
 
 
 
+//BitLy Access token: da239b687ac1cba62bc92b9a01ca02582d7c6d0c
 
 function App() {
 	const [url, setUrl] = useState('');
@@ -20,7 +21,7 @@ function App() {
 			const response = await fetch('https://api-ssl.bitly.com/v4/shorten', {
 				method: 'POST',
 				headers: {
-					Authorization: process.env.REACT_APP_BITLEY_KEY,
+					Authorization: 'Bearer da239b687ac1cba62bc92b9a01ca02582d7c6d0c',
 					'Content-Type': 'application/json',
 				},
 				body: JSON.stringify({ long_url: `${link}`, domain: 'bit.ly' }),

@@ -22,6 +22,20 @@ p {
 	font-style: italic;
 	color: rgb(13, 189, 136);
 }
+.failed {
+	display: flex;
+	position: relative;
+	width: 38%;
+	height: 50px;
+	border-radius: 0.5rem;
+	border: 1px solid grey;
+	margin-left: 2rem;
+	padding: 0.5rem;
+	font-size: 1.5rem;
+	align-self: center;
+	font-style: italic;
+	color: rgb(189, 25, 13);
+}
 .copy {
 	align-self: center;
 	font-size: 30px;

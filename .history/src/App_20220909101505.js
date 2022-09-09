@@ -8,7 +8,9 @@ import Button from './Button';
 import Clipboard from 'clipboard';
 import { useState } from 'react';
 
-
+import * as dotenv from 'dotenv';
+dotenv.config();
+import express from 'express'
 
 
 function App() {
@@ -20,7 +22,7 @@ function App() {
 			const response = await fetch('https://api-ssl.bitly.com/v4/shorten', {
 				method: 'POST',
 				headers: {
-					Authorization: process.env.REACT_APP_BITLEY_KEY,
+					Authorization: process.env.BITLEY_KEY,
 					'Content-Type': 'application/json',
 				},
 				body: JSON.stringify({ long_url: `${link}`, domain: 'bit.ly' }),

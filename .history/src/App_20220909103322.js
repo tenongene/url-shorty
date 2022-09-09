@@ -8,6 +8,8 @@ import Button from './Button';
 import Clipboard from 'clipboard';
 import { useState } from 'react';
 
+import * as dotenv from 'dotenv'
+dotenv.config()
 
 
 
