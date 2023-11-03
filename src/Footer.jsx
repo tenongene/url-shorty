@@ -4,7 +4,7 @@ import './Footer.css';
 const Footer = () => {
 
     const footerStyle = {
-		backgroundColor: 'rgb(105, 236, 175)',
+		backgroundColor: '#1a237e',
 		fontSize: '20px',
 		padding: '40px 20px',
 	};
